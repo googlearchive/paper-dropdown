@@ -67,14 +67,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <body>
 
-  <polymer-element name="x-trigger" extends="paper-icon-button" relative on-tap="{{toggle}}" noink>
+  <polymer-element name="x-trigger" extends="paper-icon-button" relative on-tap="{{toggleDropdown}}" noink>
   <template>
     <shadow></shadow>
     <content></content>
   </template>
   <script>
     Polymer({
-      toggle: function() {
+      toggleDropdown: function() {
         if (!this.dropdown) {
           this.dropdown = this.querySelector('paper-dropdown');
         }
