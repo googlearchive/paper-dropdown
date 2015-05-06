@@ -109,6 +109,18 @@ Style the background color of the dropdown with these selectors:
     ready: function() {
       this.super();
       this.sizingTarget = this.$.scroller;
+    },
+    
+    domReady: function() {
+        this.async('scroll');
+    },
+
+    get scroller() {
+        return this.$.scroller;
+    },
+
+    scroll: function() {
+        this.fire('scroll', {target: this.scroller}, this, false);
     }
 
   });
